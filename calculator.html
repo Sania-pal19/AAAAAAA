@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calculator</title>
+	<style>
+		input{width:40px;height:40px;margin: 1px;}
+
+		#main{text-align: center;}
+		h1{color:blueviolet;}
+		#tf{width:170px;}
+		#ft{width: 170px;}
+		#square{background-image: URL('sqare.png'); width: 40px;height: 40px; border:2px solid; blue;background-size: 100% 100%; }
+	</style>
+<script language="javascript">
+var op,x,y,z,m,d;
+var m;
+function one()
+{
+	a=document.getElementById('tf').value;
+	a=a+"1";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+	k=document.getElementById('tf').value;
+
+	document.getElementById('ft').value=k+"1";
+}
+
+function two()
+{
+	a=document.getElementById('tf').value;
+	a=a+"2";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+
+}
+function three()
+{
+	a=document.getElementById('tf').value;
+	a=a+"3";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+
+}
+
+function four()
+{
+	a=document.getElementById('tf').value;
+	a=a+"4";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+
+}
+
+function five()
+{
+	a=document.getElementById('tf').value;
+	a=a+"5";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+
+}
+
+function six()
+{
+	a=document.getElementById('tf').value;
+	a=a+"6";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+
+}
+function seven()
+{
+	a=document.getElementById('tf').value;
+	a=a+"7";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+
+}
+
+function eight()
+{
+	a=document.getElementById('tf').value;
+	a=a+"8";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+
+}
+
+function nine()
+{
+	a=document.getElementById('tf').value;
+	a=a+"9";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+
+}
+
+
+function zero()
+{
+	a=document.getElementById('tf').value;
+	a=a+"0";
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=a;
+
+}
+
+function plus()
+{
+
+	x=parseInt(document.getElementById('tf').value);
+	k=document.getElementById('tf').value;
+	op=1;
+	document.getElementById('ft').value=k+"+";
+	document.getElementById('tf').value="";
+}
+
+function minus()
+{
+	x=parseInt(document.getElementById('tf').value);
+	op=2;
+	document.getElementById('tf').value="";
+}
+
+function multiply()
+{
+	x=parseInt(document.getElementById('tf').value);
+	op=3;
+	document.getElementById('tf').value="";
+}
+function ms()
+{
+	m=parseInt(document.getElementById('tf').value);
+	document.getElementById('tf').value="";
+}
+
+function mr()
+{
+	document.getElementById('tf').value=m;
+}
+function mp()
+{
+	m=m+parseInt(document.getElementById('tf').value);
+	document.getElementById('tf').value="";
+
+}
+function msub()
+{
+	m=m-parseInt(document.getElementById('tf').value);
+	document.getElementById('tf').value="";
+}
+
+
+function division()
+{
+	x=parseInt(document.getElementById('tf').value);
+	op=4;
+	document.getElementById('tf').value="";
+}
+function square()
+{
+	x=parseInt(document.getElementById('tf').value);
+	document.getElementById('tf').value="";
+	document.getElementById('tf').value=x*x;
+
+}
+
+function clear1()
+{
+		y=0;
+		document.getElementById('tf').value="";
+}
+
+function equal()
+{
+	y=parseInt(document.getElementById('tf').value);
+	document.getElementById('tf').value="";
+	if(op==1)
+		z=x+y;
+	else if(op==2)
+		z=x-y;
+	else if(op==3)
+	{
+		z=x*y;
+	}
+	else if (op==4) 
+	{
+		z=x/y;
+	}
+
+	
+	document.getElementById('tf').value=z;
+}
+
+</script>
+</head>
+<body>
+	<div id="main">
+		<h1>CALCULATOR</h1>
+	<input type="text" id="ft"><br>
+	<input type="text" id="tf"><br>
+	<div id="membutton">
+	<input type="button" value="MC">
+	<input type="button" value="MR" onClick="mr()">
+	<input type="button" value="M+" onClick="mp()">
+	<input type="button" value="M-" onClick="msub()">
+	<input type="button" value="MS" onClick="ms()">
+	</div>
+	<br>
+	<input type="button" value="%">
+	<input type="button" value="CE" onClick="clear1()">
+	<input type="button" value="C">
+	<input type="button" value="/" onClick="division()">
+	<br>
+	<input type="button" value="1/x">
+	<input type="button"  id="square" onClick="square()">
+	<input type="button" value="C">
+	<input type="button" value="<x">
+	<br>
+
+	<input type="button" value="7" onClick="seven()">
+	<input type="button" value="8" onClick="eight()">
+	<input type="button" value="9" onClick="nine()">
+	<input type="button" value="*" onClick="multiply()">
+    <br>
+	<input type="button" value="4" onClick="four()">
+	<input type="button" value="5" onClick="five()">
+	<input type="button" value="6" onClick="six()">
+	<input type="button" value="-" onClick="minus()">
+	<br>
+	<input type="button" value="1" onClick="one()">
+	<input type="button" value="2"  onClick="two()">
+	<input type="button" value="3"  onClick="three()">
+	<input type="button" value="+" onClick="plus()">
+	<br>
+	<input type="button" value="+/-">
+	<input type="button" value="0" onClick="zero()">
+	<input type="button" value="." onClick="">
+	<input type="button" value="=" onClick="equal()">
+</div>
+
+</body>
+</html>
